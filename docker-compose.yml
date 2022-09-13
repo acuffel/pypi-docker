@@ -1,0 +1,21 @@
+version: "3.8"
+
+x-app-env:
+  &app-env
+  APP_NAME: "${APP_NAME}"
+  APP_VERSION: "${APP_VERSION}"
+
+services:
+  pypi-docker:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: ${APP_NAME}:${APP_VERSION}
+    volumes:
+      - .:/code
+    environment:
+      <<: *app-env
+    command:
+      - "sleep"
+      - "infinity"
+    restart: unless-stopped

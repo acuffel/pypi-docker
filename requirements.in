@@ -1,0 +1,13 @@
+# Packaging
+twine
+build
+
+# Testing
+tox
+pytest
+flake8
+pylint
+pytest-cov
+
+# App
+pydantic

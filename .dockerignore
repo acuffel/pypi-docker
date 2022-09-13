@@ -1,0 +1,8 @@
+*
+!src
+!tests
+!Makefile
+!requirements.txt
+!requirements.in
+!pyproject.toml
+!setup.cfg
